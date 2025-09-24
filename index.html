@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY with WhatsApp Icon</title>
+<title>UMA BAKERY without WhatsApp Icon</title>
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
@@ -102,36 +102,11 @@ input::placeholder {
     user-select: none;
     box-shadow: 0 3px 15px rgba(230,126,34,0.5);
     margin-top: 10px;
-    position: relative;
 }
 .subtotal-box span {
     float: left;
     font-weight: 700;
     font-size: 1.5rem;
-}
-
-/* WhatsApp icon just below the subtotal box */
-.whatsapp-icon {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ffffff;
-    color: #25d366;
-    border-radius: 14px;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.whatsapp-icon:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 14px rgba(37, 211, 102, 0.8);
 }
 </style>
 </head>
@@ -177,11 +152,7 @@ input::placeholder {
     </div>
 </div>
 
-<div class="subtotal-box">
-    <span>Sub Total:</span>
-    <span id="subtotal">₹0</span>
-    <span class="whatsapp-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></span>
-</div>
+<div class="subtotal-box"><span>Sub Total:</span><span id="subtotal">₹0</span></div>
 
 <script>
 function calculateAll() {
