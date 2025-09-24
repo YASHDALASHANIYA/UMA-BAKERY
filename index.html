@@ -2,99 +2,126 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY Without WhatsApp and Text Message Icons</title>
+<title>UMA BAKERY - Product Calculator with Contact Icons</title>
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.custom-box {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    width: 500px;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #3975c6;
-    margin-bottom: 20px;
-}
-.product-title {
-    width: 500px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 16px;
-    text-align: left;
-    border-bottom: 3px solid #e67e22;
-    padding-bottom: 6px;
-}
-.product-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin-bottom: 16px;
-    padding: 12px 20px;
-    width: 500px;
-    font-size: 1.3rem;
-    color: #555;
-}
-.product-name {
-    flex: 1;
-}
-.input-group {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 240px;
-    justify-content: flex-end;
-}
-input[type=number] {
-    width: 60px;
-    height: 30px;
-    font-size: 1rem;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-.total-box {
-    width: 80px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    text-align: center;
-    padding: 6px 0;
-    font-weight: 700;
-    color: #333;
-    user-select: none;
-}
-.input-label {
-    font-weight: 600;
-    color: #333;
-    font-size: 1rem;
-    white-space: nowrap;
-}
-.subtotal-box {
-    width: 500px;
-    background: #e67e22;
-    color: white;
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-align: right;
-    user-select: none;
-    box-shadow: 0 3px 15px rgba(230,126,34,0.5);
-    margin-top: 10px;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .custom-box {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        width: 500px;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #3975c6;
+        margin-bottom: 20px;
+    }
+    .product-title {
+        width: 500px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 16px;
+        text-align: left;
+        border-bottom: 3px solid #e67e22;
+        padding-bottom: 6px;
+    }
+    .product-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 16px;
+        padding: 12px 20px;
+        width: 500px;
+        font-size: 1.3rem;
+        color: #555;
+    }
+    .product-name {
+        flex: 1;
+    }
+    .input-group {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 240px;
+        justify-content: flex-end;
+    }
+    input[type=number] {
+        width: 60px;
+        height: 30px;
+        font-size: 1rem;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    .total-box {
+        width: 80px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+        padding: 6px 0;
+        font-weight: 700;
+        color: #333;
+        user-select: none;
+    }
+    .input-label {
+        font-weight: 600;
+        color: #333;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+    .subtotal-box {
+        width: 500px;
+        background: #e67e22;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-align: right;
+        user-select: none;
+        box-shadow: 0 3px 15px rgba(230,126,34,0.5);
+        margin-top: 10px;
+    }
+    .contact-icons {
+        margin-top: 15px;
+        width: 500px;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        font-size: 40px;
+        color: #333;
+    }
+    .contact-icons a {
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+        position: relative;
+    }
+    .contact-icons a:hover {
+        transform: scale(1.1);
+        color: #25D366;
+    }
+    /* Remove badge or notification from WhatsApp icon */
+    .fab.fa-whatsapp::after {
+        content: none !important;
+        display: none !important;
+    }
 </style>
 </head>
 <body>
@@ -140,6 +167,17 @@ input[type=number] {
 </div>
 
 <div class="subtotal-box" id="subtotal">0</div>
+
+<div class="contact-icons" aria-label="Contact Options">
+    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="sms:+919876543210" title="Text Message भेजें" aria-label="Text Message">
+        <i class="fas fa-comment-alt"></i>
+    </a>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>
 function calculateAll() {
