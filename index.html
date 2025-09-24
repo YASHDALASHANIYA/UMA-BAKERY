@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8" />
-    <title>UMA BAKERY Products with Sub Total and WhatsApp</title>
+    <title>UMA BAKERY WhatsApp and Text Icons</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,169 +12,41 @@
             flex-direction: column;
             align-items: center;
         }
-        .custom-box {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            width: 500px;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #3975c6;
-            margin-bottom: 20px;
-        }
-        .product-title {
-            width: 500px;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 16px;
-            text-align: left;
-            border-bottom: 3px solid #e67e22;
-            padding-bottom: 6px;
-        }
-        .product-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 16px;
-            padding: 12px 20px;
-            width: 500px;
-            font-size: 1.3rem;
-            color: #555;
-        }
-        .product-name {
-            flex: 1;
-        }
-        .input-group {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            min-width: 240px;
-            justify-content: flex-end;
-        }
-        input[type=number] {
-            width: 60px;
-            height: 30px;
-            font-size: 1rem;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-        .total-box {
-            width: 80px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            text-align: center;
-            padding: 6px 0;
-            font-weight: 700;
-            color: #333;
-            user-select: none;
-        }
-        .input-label {
-            font-weight: 600;
-            color: #333;
-            font-size: 1rem;
-            white-space: nowrap;
-        }
-        .subtotal-box {
-            width: 500px;
-            background: #e67e22;
-            color: white;
-            font-weight: 700;
-            font-size: 1.5rem;
-            padding: 12px 20px;
-            border-radius: 10px;
-            text-align: right;
-            user-select: none;
-            box-shadow: 0 3px 15px rgba(230,126,34,0.5);
-            margin-top: 10px;
-        }
-        .whatsapp-container {
+        .icon-container {
             margin-top: 15px;
             width: 500px;
             text-align: right;
+            gap: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-end;
         }
-        .whatsapp-link img {
-            width: 40px;
-            height: 40px;
+        .icon-link {
+            display: inline-block;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        .whatsapp-link img:hover {
+        .icon-link img {
+            width: 40px;
+            height: 40px;
+        }
+        .icon-link:hover {
             transform: scale(1.1);
         }
     </style>
 </head>
 <body>
 
-<div class="custom-box">UMA BAKERY</div>
-
-<div class="product-title">Product</div>
-
-<div class="product-row">
-    <div class="product-name">Toss</div>
-    <div class="input-group">
-        <label class="input-label" for="qty-toss">Qty:</label>
-        <input type="number" id="qty-toss" min="0" value="0" oninput="calculateAll()" />
-        <label class="input-label" for="price-toss">Price:</label>
-        <input type="number" id="price-toss" min="0" step="0.01" value="0" oninput="calculateAll()" />
-        <label class="input-label">Total:</label>
-        <div id="total-toss" class="total-box">0</div>
-    </div>
-</div>
-
-<div class="product-row">
-    <div class="product-name">Khari</div>
-    <div class="input-group">
-        <label class="input-label" for="qty-khari">Qty:</label>
-        <input type="number" id="qty-khari" min="0" value="0" oninput="calculateAll()" />
-        <label class="input-label" for="price-khari">Price:</label>
-        <input type="number" id="price-khari" min="0" step="0.01" value="0" oninput="calculateAll()" />
-        <label class="input-label">Total:</label>
-        <div id="total-khari" class="total-box">0</div>
-    </div>
-</div>
-
-<div class="product-row">
-    <div class="product-name">Nan Khatash</div>
-    <div class="input-group">
-        <label class="input-label" for="qty-nan">Qty:</label>
-        <input type="number" id="qty-nan" min="0" value="0" oninput="calculateAll()" />
-        <label class="input-label" for="price-nan">Price:</label>
-        <input type="number" id="price-nan" min="0" step="0.01" value="0" oninput="calculateAll()" />
-        <label class="input-label">Total:</label>
-        <div id="total-nan" class="total-box">0</div>
-    </div>
-</div>
-
-<div class="subtotal-box" id="subtotal">Sub Total: 0</div>
-
-<div class="whatsapp-container">
-    <a class="whatsapp-link" href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें">
+<div class="icon-container">
+    <!-- WhatsApp Icon -->
+    <a class="icon-link" href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
     </a>
+    <!-- Text Message Icon -->
+    <a class="icon-link" href="sms:+919876543210" title="Text Message भेजें">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Message_icon.svg" alt="Text Message Icon" />
+    </a>
 </div>
-
-<script>
-function calculateAll() {
-    const products = ['toss', 'khari', 'nan'];
-    let subtotal = 0;
-    products.forEach(prod => {
-        const qty = parseFloat(document.getElementById('qty-' + prod).value) || 0;
-        const price = parseFloat(document.getElementById('price-' + prod).value) || 0;
-        const total = qty * price;
-        subtotal += total;
-        document.getElementById('total-' + prod).innerText = total.toFixed(2);
-    });
-    document.getElementById('subtotal').innerText = 'Sub Total: ' + subtotal.toFixed(2);
-}
-</script>
 
 </body>
 </html>
