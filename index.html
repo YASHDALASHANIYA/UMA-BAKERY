@@ -2,7 +2,9 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY Without WhatsApp and Text Message Icons</title>
+<title>UMA BAKERY with Sub Total Label</title>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -95,6 +97,11 @@ input[type=number] {
     box-shadow: 0 3px 15px rgba(230,126,34,0.5);
     margin-top: 10px;
 }
+.subtotal-box span {
+    float: left;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 </style>
 </head>
 <body>
@@ -139,7 +146,7 @@ input[type=number] {
     </div>
 </div>
 
-<div class="subtotal-box" id="subtotal">0</div>
+<div class="subtotal-box"><span>Sub Total:</span><span id="subtotal">0</span></div>
 
 <script>
 function calculateAll() {
