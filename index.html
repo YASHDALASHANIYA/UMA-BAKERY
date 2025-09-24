@@ -2,9 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY Contact Icons without Badge</title>
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<title>UMA BAKERY Without WhatsApp and Text Message Icons</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -97,30 +95,6 @@ input[type=number] {
     box-shadow: 0 3px 15px rgba(230,126,34,0.5);
     margin-top: 10px;
 }
-.contact-icons {
-    margin-top: 15px;
-    width: 500px;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    font-size: 40px;
-    color: #333;
-}
-.contact-icons a {
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-    position: relative;
-}
-.contact-icons a:hover {
-    transform: scale(1.1);
-    color: #25D366;
-}
-/* Remove badge or number on WhatsApp icon */
-.fab.fa-whatsapp::after {
-    content: none !important;
-}
 </style>
 </head>
 <body>
@@ -166,17 +140,6 @@ input[type=number] {
 </div>
 
 <div class="subtotal-box" id="subtotal">0</div>
-
-<div class="contact-icons" aria-label="Contact Options">
-    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="sms:+919876543210" title="Text Message भेजें" aria-label="Text Message">
-        <i class="fas fa-comment-alt"></i>
-    </a>
-</div>
-
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>
 function calculateAll() {
