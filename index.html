@@ -2,35 +2,36 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY with Sub Total and Icons</title>
+<title>UMA BAKERY with Black Background</title>
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: #f9f9f9;
+    background: #000000; /* Pure Black Background */
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #eee;
 }
 .custom-box {
-    background: white;
+    background: #111111;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
     width: 500px;
     padding: 20px;
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
-    color: #3975c6;
+    color: #7abaff;
     margin-bottom: 20px;
 }
 .product-title {
     width: 500px;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2c3e50;
+    color: #a0c8ff;
     margin-bottom: 16px;
     text-align: left;
     border-bottom: 3px solid #e67e22;
@@ -40,14 +41,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: #222222;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
     margin-bottom: 16px;
     padding: 12px 20px;
     width: 500px;
     font-size: 1.3rem;
-    color: #555;
+    color: #ccc;
 }
 .product-name {
     flex: 1;
@@ -64,23 +65,25 @@ input[type=number] {
     height: 30px;
     font-size: 1rem;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 6px;
+    background: #111111;
+    color: #eee;
 }
 .total-box {
     width: 80px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: #333333;
+    border: 1px solid #555;
     border-radius: 6px;
     text-align: center;
     padding: 6px 0;
     font-weight: 700;
-    color: #333;
+    color: #7abaff;
     user-select: none;
 }
 .input-label {
     font-weight: 600;
-    color: #333;
+    color: #ccc;
     font-size: 1rem;
     white-space: nowrap;
 }
@@ -118,7 +121,7 @@ input[type=number] {
     font-size: 2rem;
     color: #fff;
     margin: 0 3px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.11);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.11);
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
 }
