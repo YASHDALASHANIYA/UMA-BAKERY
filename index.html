@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
-<title>UMA BAKERY with Sub Total Label</title>
+<title>UMA BAKERY with Sub Total and Icons</title>
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
@@ -102,6 +102,33 @@ input[type=number] {
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+.icon-box {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0 0 0;
+}
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 3px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.11);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.icon-btn.whatsapp { background: #25d366; }
+.icon-btn.chat     { background: #27d1cb; }
+.icon-btn.mail     { background: #e255a1; }
+.icon-btn.copy     { background: #7c7ce9; }
+.icon-btn.delete   { background: #ff9800; }
+.icon-btn:hover    { transform: scale(1.08); opacity: 0.92; }
 </style>
 </head>
 <body>
@@ -147,6 +174,15 @@ input[type=number] {
 </div>
 
 <div class="subtotal-box"><span>Sub Total:</span><span id="subtotal">0</span></div>
+
+<!-- ICON BOX (Image wale icons jaise) -->
+<div class="icon-box">
+    <span class="icon-btn whatsapp"><i class="fab fa-whatsapp"></i></span>
+    <span class="icon-btn chat"><i class="fas fa-comment-alt"></i></span>
+    <span class="icon-btn mail"><i class="fas fa-envelope"></i></span>
+    <span class="icon-btn copy"><i class="fas fa-copy"></i></span>
+    <span class="icon-btn delete"><i class="fas fa-trash"></i></span>
+</div>
 
 <script>
 function calculateAll() {
