@@ -2,7 +2,9 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8" />
-    <title>UMA BAKERY Products with Sub Total and Contact Icons</title>
+    <title>UMA BAKERY Products with Contact Icons</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -102,18 +104,17 @@
             display: flex;
             justify-content: flex-end;
             gap: 15px;
+            font-size: 40px;
+            color: #333;
         }
         .contact-icons a {
-            display: inline-block;
             cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .contact-icons img {
-            width: 40px;
-            height: 40px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-decoration: none;
         }
         .contact-icons a:hover {
             transform: scale(1.1);
+            color: #25D366; /* WhatsApp green on hover */
         }
     </style>
 </head>
@@ -161,14 +162,16 @@
 
 <div class="subtotal-box" id="subtotal">Sub Total: 0</div>
 
-<div class="contact-icons">
-    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+<div class="contact-icons" aria-label="Contact Options">
+    <a href="sms:+919876543210" title="Text Message भेजें" aria-label="Text Message">
+        <i class="fas fa-comment-alt"></i>
     </a>
-    <a href="sms:+919876543210" title="Text Message भेजें">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Message_icon.svg" alt="Text Message Icon" />
+    <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 </div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>
 function calculateAll() {
