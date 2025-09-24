@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8" />
-    <title>UMA BAKERY Products with Sub Total</title>
+    <title>UMA BAKERY Products with Sub Total and WhatsApp</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,6 +95,20 @@
             box-shadow: 0 3px 15px rgba(230,126,34,0.5);
             margin-top: 10px;
         }
+        .whatsapp-container {
+            margin-top: 15px;
+            width: 500px;
+            text-align: right;
+        }
+        .whatsapp-link img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-link img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -140,6 +154,12 @@
 </div>
 
 <div class="subtotal-box" id="subtotal">Sub Total: 0</div>
+
+<div class="whatsapp-container">
+    <a class="whatsapp-link" href="https://wa.me/919876543210" target="_blank" title="WhatsApp पर संपर्क करें">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+    </a>
+</div>
 
 <script>
 function calculateAll() {
